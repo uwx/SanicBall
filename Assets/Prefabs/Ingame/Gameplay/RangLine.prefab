@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &543550961260595590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 100008, guid: f399233c6aa19704ba5066eb41c8f6c4,
+    type: 2}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543550961260595591}
+  - component: {fileID: 6973484973818495193}
+  m_Layer: 0
+  m_Name: RangLine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &543550961260595591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 400008, guid: f399233c6aa19704ba5066eb41c8f6c4,
+    type: 2}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543550961260595590}
+  m_LocalRotation: {x: 0.00013849654, y: 0.13863678, z: 0.007127336, w: 0.99031764}
+  m_LocalPosition: {x: 820.5, y: 12.9, z: -107.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0.0975, y: 15.937699, z: 0.8111}
+--- !u!114 &6973484973818495193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543550961260595590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037492c81a087274d826288173be16cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangPrefab: {fileID: 100000, guid: 921276dbf5b73414cbe3bf4a2c955a08, type: 3}
+  snapToGround: 1
+  groundOffset: 0.5
+  shouldRespawn: 1
+  respawnTime: 10
+  rangRows: 8
+  rangColumns: 2
+  rangRowSpacing: 4
+  rangColumnSpacing: 4
