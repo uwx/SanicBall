@@ -47,7 +47,7 @@ namespace Sanicball.Logic
                 Rigidbody ballRb = BallObject.GetComponent<Rigidbody>();
 
                 BallObject.transform.SetPositionAndRotation(movement.Position, movement.Rotation);
-                ballRb.velocity = movement.Velocity;
+                ballRb.linearVelocity = movement.Velocity;
                 ballRb.angularVelocity = movement.AngularVelocity;
                 BallObject.DirectionVector = movement.DirectionVector;
                 BallObject.TotalRings = movement.Rings;

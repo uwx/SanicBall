@@ -88,7 +88,7 @@ namespace Sanicball
                     var rb = playerToMove.Ball.GetComponent<Rigidbody>();
 
                     rb.Move(spawnpoint, transform.rotation);
-                    rb.velocity = Random.insideUnitSphere * 0.5f;
+                    rb.linearVelocity = Random.insideUnitSphere * 0.5f;
                     rb.angularVelocity = new Vector3(0, Random.Range(-50f, 50f));
                     playerToMove.Ball.CanMove = false;
                     playerToMove.Ball.gameObject.layer = LayerMask.NameToLayer("Racer");

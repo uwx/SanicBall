@@ -67,10 +67,10 @@ public class Rang : MonoBehaviour
                 yield break;
 
             // if ball is moving, move with it ever so slightly slower
-            transform.position += Time.deltaTime * rb.velocity;
+            transform.position += Time.deltaTime * rb.linearVelocity;
             transform.position = Vector3.SmoothDamp(transform.position, ball.transform.position, ref velocity, 0.15f);
 
-            var targetRotation = rb.velocity.magnitude > 0.1f ? Quaternion.LookRotation(rb.velocity) : Quaternion.identity;
+            var targetRotation = rb.linearVelocity.magnitude > 0.1f ? Quaternion.LookRotation(rb.linearVelocity) : Quaternion.identity;
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
 
             var distance = Vector3.Distance(transform.position, ball.transform.position);

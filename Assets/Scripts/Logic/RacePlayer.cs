@@ -98,7 +98,7 @@ namespace Sanicball.Logic
         public ControlType CtrlType => ball.CtrlType;
         public int Character => ball.CharacterId;
         public Transform Transform => ball.transform;
-        public float Speed => ball.GetComponent<Rigidbody>().velocity.magnitude;
+        public float Speed => ball.GetComponent<Rigidbody>().linearVelocity.magnitude;
         public IBallCamera Camera => ballCamera;
         public int Rings => ball.Rings;
 
@@ -315,7 +315,7 @@ namespace Sanicball.Logic
             var rotation = sr.checkpoints[currentCheckpointIndex].transform.rotation;
 
             var rb = ball.GetComponent<Rigidbody>();
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             ball.transform.SetPositionAndRotation(position, rotation);
             ballCamera?.SetDirection(rotation);
