@@ -47,7 +47,7 @@ namespace Sanicball.Data
 
         public static GameSettings GameSettings => instance.gameSettings;
         public static KeybindCollection Keybinds => instance.keybinds;
-        public static MatchSettings MatchSettings { get { return instance.matchSettings; } set { instance.matchSettings = value; } }
+        public static ref MatchSettings MatchSettings => ref instance.matchSettings;
         public static List<RaceRecord> RaceRecords => instance.raceRecords;
 
         public static StageInfo[] Stages => instance.stages;
@@ -65,7 +65,7 @@ namespace Sanicball.Data
                 var possible = false;
                 if (GameSettings.eSportsReady)
                 {
-                    var m = FindObjectOfType<Logic.MatchManager>();
+                    var m = FindAnyObjectByType<Logic.MatchManager>();
                     if (m)
                     {
                         var players = m.Players;
